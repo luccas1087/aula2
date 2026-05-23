@@ -1,3 +1,5 @@
+const input   = require("readline-sync")
+
 function validadorSenha(senha) {    
     if (senha.length < 8) {
         return "A senha deve conter no mínimo 8 caracteres.";
@@ -17,5 +19,6 @@ function validadorSenha(senha) {
     return "Senha válida.";
 }
 
-console.log(validadorSenha("Ceep2026"));
-console.log(validadorSenha("Ceep2026!"));
+let senha = input.question("Digite a senha para a validação: ");
+
+console.log(validadorSenha(senha));
